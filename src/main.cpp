@@ -1,6 +1,9 @@
 #include <cstdlib>
-#include <iostream>
+
+#include "../include/system.hpp"
+
 int main (void) {
-	std::cout << "Hello World !" << std::endl;
+   System system;
+   system.runtime();
 	return EXIT_SUCCESS;
 }

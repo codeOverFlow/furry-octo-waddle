@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 project(CxxChip)
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11")
 file(GLOB_RECURSE sources "src/*.c*")
 file(GLOB_RECURSE headers "include/*.h*")
 set(EXECUTABLE_OUTPUT_PATH bin/${CMAKE_BUILD_TYPE})
