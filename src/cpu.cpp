@@ -43,6 +43,10 @@ Cpu::Cpu() : m_pc(ENTRY_POINT), m_i(0), m_stack(), m_systemDelay(0), m_soundDela
 
 Cpu::~Cpu() {}
 
+uint* Cpu::memory() {
+   return m_memory;
+}
+
 uint Cpu::memoryValue(uint index) {
    return m_memory[index];
 }

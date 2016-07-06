@@ -3,17 +3,21 @@
 #include "constants.hpp"
 
 #include <iostream>
+#include <SFML/Graphics.hpp>
 
 #include <string.h>
 
+
 class Screen {
    private:
-      char m_screen[H_UNITS][W_UNITS];
+      sf::RectangleShape m_screen[H_UNITS][W_UNITS];
+      sf::RenderWindow m_window;
    public:
       Screen();
       ~Screen();
-      char screenValueAt(uint x, uint y);
-      void setScreenValueAt(uint x, uint y, char value);
+      sf::RenderWindow* window();
+      sf::RectangleShape screenValueAt(uint x, uint y);
+      void setScreenValueAt(uint x, uint y, sf::RectangleShape value);
       void clear();
       void print();
 };

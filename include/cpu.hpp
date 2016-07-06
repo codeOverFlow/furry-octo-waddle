@@ -19,6 +19,7 @@ class Cpu {
    public:
       Cpu();
       ~Cpu();
+      uint* memory();
       uint memoryValue(uint index);
       void setMemoryValue(uint index, uint value);
       uint pcValue();

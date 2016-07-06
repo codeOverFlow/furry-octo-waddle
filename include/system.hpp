@@ -4,6 +4,9 @@
 #include "screen.hpp"
 
 #include <random>
+#include <string>
+#include <fstream>
+#include <iostream>
 
 class System {
    private:
@@ -14,6 +17,7 @@ class System {
    public:
       System();
       ~System();
+      void loadRom(std::string const& path);
       void interpretOpcode();
       void runtime();
       void draw(uint x, uint y, uint heigth);
